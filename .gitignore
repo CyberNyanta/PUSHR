@@ -35,6 +35,9 @@ captures/
 # Intellij
 *.iml
 
+# JetBrains IDE
+.idea/
+
 # Keystore files
 *.jks
 
