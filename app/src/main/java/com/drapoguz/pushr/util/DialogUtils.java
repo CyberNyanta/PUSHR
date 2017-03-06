@@ -9,7 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 
-public final class DialogUtils {
+public abstract class DialogUtils {
 
     public static Dialog getOneButtonDialog(@NonNull Context context,
                                             String dialogTitle,
@@ -30,7 +30,7 @@ public final class DialogUtils {
                                             String dialogMessage,
                                             String buttonTitle,
                                             DialogInterface.OnClickListener buttonOnClickListener,
-                                            View view) {
+                                            @NonNull View view) {
 
         return createOneButtonBuilder(context,
                 dialogTitle,
@@ -94,7 +94,7 @@ public final class DialogUtils {
                                              DialogInterface.OnClickListener positiveButtonOnClickListener,
                                              String negativeButtonTitle,
                                              DialogInterface.OnClickListener negativeButtonOnClickListener,
-                                             View view) {
+                                             @NonNull View view) {
 
         return createTwoButtonsBuilder(context,
                 dialogTitle,
@@ -174,7 +174,7 @@ public final class DialogUtils {
                                                DialogInterface.OnClickListener neutralButtonOnClickListener,
                                                String negativeButtonTitle,
                                                DialogInterface.OnClickListener negativeButtonOnClickListener,
-                                               View view) {
+                                               @NonNull View view) {
 
         return createThreeButtonsBuilder(context,
                 dialogTitle,
