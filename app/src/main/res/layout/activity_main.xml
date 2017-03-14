@@ -7,8 +7,55 @@
     android:layout_height="match_parent"
     tools:context="com.drapoguz.pushr.ui.main.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+    <!--Toolbar:-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar_main"/>
+    </android.support.design.widget.AppBarLayout>
+    <!--:Toolbar-->
+
+    <!--Content:-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/violet"
+        android:orientation="vertical"
+        android:paddingTop="?actionBarSize">
+
+        <!--Dashboard:-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frame_personal_records"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <FrameLayout
+                    android:id="@+id/frame_statistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </ScrollView>
+        <!--:Dashboard-->
+
+        <Button
+            android:id="@+id/button_start_training"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/a_main_btn_start_training_height"
+            android:background="@drawable/button_background_yellow"
+            android:text="@string/a_main_btn_start_training"
+            android:textColor="@color/violetDark"
+            android:textSize="@dimen/a_main_btn_start_training_text_size"/>
+    </LinearLayout>
+    <!--:Content-->
 </RelativeLayout>

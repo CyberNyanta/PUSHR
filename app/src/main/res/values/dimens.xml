@@ -1,3 +1,4 @@
 <resources>
-
+    <dimen name="a_main_btn_start_training_height">64dp</dimen>
+    <dimen name="a_main_btn_start_training_text_size">24sp</dimen>
 </resources>

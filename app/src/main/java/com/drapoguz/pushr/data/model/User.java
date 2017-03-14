@@ -26,6 +26,8 @@ public class User extends RealmObject {
 
     private RealmList<Training> mTrainings;
 
+    private Settings mSettings;
+
 
     // Getters and Setters
     public int getId() {
@@ -106,5 +108,15 @@ public class User extends RealmObject {
     public void setTrainings(RealmList<Training> trainings) {
 
         mTrainings = trainings;
+    }
+
+    public Settings getSettings() {
+
+        return mSettings;
+    }
+
+    public void setSettings(Settings settings) {
+
+        mSettings = settings;
     }
 }

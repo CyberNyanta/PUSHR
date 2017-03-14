@@ -2,7 +2,22 @@ package com.drapoguz.pushr.ui.main;
 
 import com.drapoguz.pushr.ui.base.BasePresenter;
 
+import javax.inject.Inject;
+
 public class MainPresenter extends BasePresenter<MainContract.View>
         implements MainContract.Presenter<MainContract.View> {
 
+    // Constructors
+    @Inject
+    public MainPresenter() {
+
+    }
+
+
+    // Implementation MainContract.Presenter
+    @Override
+    public void onButtonStartTrainingClicked() {
+
+        getView().goToTraining();
+    }
 }
