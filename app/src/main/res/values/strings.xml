@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">PUSHR</string>
 
+    <string name="m_main_profile">Profile</string>
+    <string name="m_main_statistics">Statistics</string>
+    <string name="m_main_settings">Settings</string>
+
     <string name="a_main_title">@string/app_name</string>
     <string name="a_main_btn_start_training">Start Training</string>
 </resources>

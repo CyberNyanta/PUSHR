@@ -16,6 +16,24 @@ public class MainPresenter extends BasePresenter<MainContract.View>
 
     // Implementation MainContract.Presenter
     @Override
+    public void onMenuProfileClicked() {
+
+        getView().goToProfile();
+    }
+
+    @Override
+    public void onMenuStatisticsClicked() {
+
+        getView().goToStatistics();
+    }
+
+    @Override
+    public void onMenuSettingsClicked() {
+
+        getView().goToSettings();
+    }
+
+    @Override
     public void onButtonStartTrainingClicked() {
 
         getView().goToTraining();
