@@ -1,13 +1,16 @@
 package com.drapoguz.pushr.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import com.drapoguz.pushr.App;
 import com.drapoguz.pushr.R;
 import com.drapoguz.pushr.ui.base.BaseActivity;
+import com.drapoguz.pushr.ui.training.TrainingActivity;
 
 import javax.inject.Inject;
 
@@ -65,5 +68,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     @Override
     public void goToTraining() {
 
+        Intent intent = new Intent(App.getApp(this), TrainingActivity.class);
+        startActivity(intent);
     }
 }
