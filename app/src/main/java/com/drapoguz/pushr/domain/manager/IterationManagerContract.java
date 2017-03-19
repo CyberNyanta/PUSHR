@@ -12,6 +12,10 @@ public interface IterationManagerContract {
 
     Iteration getById(int id);
 
+    Iteration getMaxByPushUps();
+
+    Iteration getMinByPushUps();
+
     void add(Iteration iteration);
 
     void update(Iteration iteration);

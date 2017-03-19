@@ -8,6 +8,7 @@ import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
+import io.realm.Sort;
 
 public class IterationLocalSource implements IterationLocalSourceContract {
 
@@ -51,6 +52,26 @@ public class IterationLocalSource implements IterationLocalSourceContract {
     public Iteration getById(int id) {
 
         Iteration iteration = mRealm.where(Iteration.class).equalTo("mId", id).findFirst();
+
+        mRealm.close();
+
+        return iteration;
+    }
+
+    @Override
+    public Iteration getMaxByPushUps() {
+
+        Iteration iteration = mRealm.where(Iteration.class).findAll().sort("mPushUps", Sort.DESCENDING).first();
+
+        mRealm.close();
+
+        return iteration;
+    }
+
+    @Override
+    public Iteration getMinByPushUps() {
+
+        Iteration iteration = mRealm.where(Iteration.class).findAll().sort("mPushUps").first();
 
         mRealm.close();
 

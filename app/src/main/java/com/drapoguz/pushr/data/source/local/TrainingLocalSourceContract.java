@@ -12,6 +12,10 @@ public interface TrainingLocalSourceContract {
 
     Training getById(int id);
 
+    Training getMaxByPushUps();
+
+    Training getMinByPushUps();
+
     void add(final Training training);
 
     void update(final Training training);

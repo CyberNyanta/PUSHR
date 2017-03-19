@@ -38,6 +38,18 @@ public class IterationManager implements IterationManagerContract {
     }
 
     @Override
+    public Iteration getMaxByPushUps() {
+
+        return mIterationLocalSource.getMaxByPushUps();
+    }
+
+    @Override
+    public Iteration getMinByPushUps() {
+
+        return mIterationLocalSource.getMinByPushUps();
+    }
+
+    @Override
     public void add(Iteration iteration) {
 
         mIterationLocalSource.add(iteration);

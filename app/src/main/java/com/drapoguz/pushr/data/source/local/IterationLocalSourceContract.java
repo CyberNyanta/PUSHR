@@ -12,6 +12,10 @@ public interface IterationLocalSourceContract {
 
     Iteration getById(int id);
 
+    Iteration getMaxByPushUps();
+
+    Iteration getMinByPushUps();
+
     void add(final Iteration iteration);
 
     void update(final Iteration iteration);

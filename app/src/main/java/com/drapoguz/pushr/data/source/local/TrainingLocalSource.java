@@ -8,6 +8,7 @@ import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
+import io.realm.Sort;
 
 public class TrainingLocalSource implements TrainingLocalSourceContract {
 
@@ -51,6 +52,26 @@ public class TrainingLocalSource implements TrainingLocalSourceContract {
     public Training getById(int id) {
 
         Training training = mRealm.where(Training.class).equalTo("mId", id).findFirst();
+
+        mRealm.close();
+
+        return training;
+    }
+
+    @Override
+    public Training getMaxByPushUps() {
+
+        Training training = mRealm.where(Training.class).findAll().sort("mPushUps", Sort.DESCENDING).first();
+
+        mRealm.close();
+
+        return training;
+    }
+
+    @Override
+    public Training getMinByPushUps() {
+
+        Training training = mRealm.where(Training.class).findAll().sort("mPushUps").first();
 
         mRealm.close();
 

@@ -38,6 +38,18 @@ public class TrainingManager implements TrainingManagerContract {
     }
 
     @Override
+    public Training getMaxByPushUps() {
+
+        return mTrainingLocalSource.getMaxByPushUps();
+    }
+
+    @Override
+    public Training getMinByPushUps() {
+
+        return mTrainingLocalSource.getMinByPushUps();
+    }
+
+    @Override
     public void add(Training training) {
 
         mTrainingLocalSource.add(training);
