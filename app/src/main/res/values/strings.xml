@@ -7,4 +7,9 @@
 
     <string name="a_main_title">@string/app_name</string>
     <string name="a_main_btn_start_training">Start Training</string>
+
+    <string name="f_main_personal_records_txt_personal_records">Personal Records</string>
+    <string name="f_main_personal_records_txt_iteration">Set</string>
+    <string name="f_main_personal_records_txt_training">Training</string>
+    <string name="f_main_personal_records_txt_day">Day</string>
 </resources>

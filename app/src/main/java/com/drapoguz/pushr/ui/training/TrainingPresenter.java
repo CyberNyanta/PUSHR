@@ -12,4 +12,11 @@ public class TrainingPresenter extends BasePresenter<TrainingContract.View>
     public TrainingPresenter() {
 
     }
+
+
+    // Implementation TrainingContract.Presenter
+    @Override
+    public void getData() {
+
+    }
 }

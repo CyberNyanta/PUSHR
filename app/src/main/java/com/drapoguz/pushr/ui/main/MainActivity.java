@@ -12,7 +12,9 @@ import android.widget.Button;
 import com.drapoguz.pushr.App;
 import com.drapoguz.pushr.R;
 import com.drapoguz.pushr.ui.base.BaseActivity;
+import com.drapoguz.pushr.ui.main.personalrecords.MainPersonalRecordsFragment;
 import com.drapoguz.pushr.ui.training.TrainingActivity;
+import com.drapoguz.pushr.util.ActivityUtils;
 
 import javax.inject.Inject;
 
@@ -20,7 +22,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
     // Data Members
     @Inject
-    MainPresenter mMainPresenter;
+    MainPresenter mPresenter;
 
 
     // Activity Lifecycle
@@ -32,16 +34,16 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
         setContentView(R.layout.activity_main);
 
-        initView();
+        registerViewElements();
 
-        mMainPresenter.attachView(this);
+        mPresenter.attachView(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
 
-        mMainPresenter.detachView();
+        mPresenter.detachView();
     }
 
 
@@ -60,13 +62,13 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
         switch (item.getItemId()) {
             case R.id.menu_main_profile:
-                mMainPresenter.onMenuProfileClicked();
+                mPresenter.onMenuProfileClicked();
                 return true;
             case R.id.menu_main_statistics:
-                mMainPresenter.onMenuStatisticsClicked();
+                mPresenter.onMenuStatisticsClicked();
                 return true;
             case R.id.menu_main_settings:
-                mMainPresenter.onMenuSettingsClicked();
+                mPresenter.onMenuSettingsClicked();
                 return true;
         }
 
@@ -75,7 +77,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
 
     // UI
-    private void initView() {
+    protected void registerViewElements() {
 
         // Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
@@ -83,19 +85,38 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.violetDark));
         setSupportActionBar(toolbar);
 
+        // Personal Records Fragment
+        MainPersonalRecordsFragment personalRecordsFragment = (MainPersonalRecordsFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.frame_personal_records);
+
+        if (personalRecordsFragment == null) {
+
+            personalRecordsFragment = new MainPersonalRecordsFragment();
+
+            ActivityUtils.addFragmentToActivity(
+                    getSupportFragmentManager(),
+                    personalRecordsFragment,
+                    R.id.frame_personal_records);
+        }
+
         // Button Start Training
         Button buttonStartTraining = (Button) findViewById(R.id.button_start_training);
         buttonStartTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                mMainPresenter.onButtonStartTrainingClicked();
+                mPresenter.onButtonStartTrainingClicked();
             }
         });
     }
 
 
     // Implementation MainContract.View
+    @Override
+    public void setData() {
+
+    }
+
     @Override
     public void goToProfile() {
 

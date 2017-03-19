@@ -4,6 +4,7 @@ public interface BaseContract {
 
     interface View {
 
+        void setData();
     }
 
 
@@ -16,5 +17,7 @@ public interface BaseContract {
         boolean isViewAttached();
 
         T getView();
+
+        void getData();
     }
 }

@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="@dimen/f_main_personal_records_box_root_padding"
+              tools:context=".ui.main.personalrecords.MainPersonalRecordsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/violetDark"
+        android:orientation="vertical">
+
+        <!--Header:-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/f_main_personal_records_box_title_padding">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/f_main_personal_records_txt_personal_records"
+                android:textAllCaps="true"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/f_main_personal_records_txt_title_text_size"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <!--:Header-->
+
+        <!--Header Border Bottom:-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/f_main_personal_records_box_title_border_bottom_height"
+            android:background="@color/yellowDark"/>
+        <!--:Header Border Bottom-->
+
+        <!--Records:-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <!--Iteration:-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/f_main_personal_records_box_item_padding">
+
+                <TextView
+                    android:id="@+id/txt_iteration_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f_main_personal_records_txt_item_value_text_size"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/f_main_personal_records_txt_item_label_margin_top"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/f_main_personal_records_txt_iteration"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f_main_personal_records_txt_item_label_text_size"/>
+            </LinearLayout>
+            <!--:Iteration-->
+
+            <!--Separator:-->
+            <LinearLayout
+                android:layout_width="@dimen/f_main_personal_records_box_item_separator_width"
+                android:layout_height="match_parent"
+                android:background="@color/violet"/>
+            <!--:Separator-->
+
+            <!--Training:-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/f_main_personal_records_box_item_padding">
+
+                <TextView
+                    android:id="@+id/txt_training_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f_main_personal_records_txt_item_value_text_size"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/f_main_personal_records_txt_item_label_margin_top"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/f_main_personal_records_txt_training"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f_main_personal_records_txt_item_label_text_size"/>
+            </LinearLayout>
+            <!--:Training-->
+
+            <!--Separator:-->
+            <LinearLayout
+                android:layout_width="@dimen/f_main_personal_records_box_item_separator_width"
+                android:layout_height="match_parent"
+                android:background="@color/violet"/>
+            <!--:Separator-->
+
+            <!--Day:-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/f_main_personal_records_box_item_padding">
+
+                <TextView
+                    android:id="@+id/txt_day_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f_main_personal_records_txt_item_value_text_size"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/f_main_personal_records_txt_item_label_margin_top"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/f_main_personal_records_txt_day"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/f_main_personal_records_txt_item_label_text_size"/>
+            </LinearLayout>
+            <!--:Day-->
+        </LinearLayout>
+        <!--:Records-->
+    </LinearLayout>
+</LinearLayout>

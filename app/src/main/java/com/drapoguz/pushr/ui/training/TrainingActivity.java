@@ -40,4 +40,11 @@ public class TrainingActivity extends BaseActivity implements TrainingContract.V
     private void initView() {
 
     }
+
+
+    // Implementation TrainingContract.View
+    @Override
+    public void setData() {
+
+    }
 }

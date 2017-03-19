@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import com.drapoguz.pushr.App;
 import com.drapoguz.pushr.injection.component.ActivityComponent;
 import com.drapoguz.pushr.injection.component.DaggerActivityComponent;
-import com.drapoguz.pushr.injection.module.ActivityModule;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -14,7 +13,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
 
     // Protected Methods
-    protected ActivityComponent getActivityComponent() {
+    public ActivityComponent getActivityComponent() {
 
         if (mActivityComponent == null) {
 
@@ -24,5 +23,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
 
         return mActivityComponent;
+    }
+
+
+    // UI
+    protected void registerViewElements() {
+
+    }
+
+    protected void unregisterViewElements() {
+
     }
 }
