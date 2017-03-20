@@ -259,6 +259,7 @@ public abstract class DialogUtils {
                                                               View view) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
+                .setCancelable(false)
                 .setTitle(dialogTitle)
                 .setMessage(dialogMessage)
                 .setPositiveButton(buttonTitle, buttonOnClickListener);

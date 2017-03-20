@@ -20,7 +20,7 @@ import javax.inject.Inject;
 
 public class MainActivity extends BaseActivity implements MainContract.View {
 
-    // Data Members
+    // Data
     @Inject
     MainPresenter mPresenter;
 

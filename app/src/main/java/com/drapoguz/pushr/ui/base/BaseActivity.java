@@ -8,11 +8,11 @@ import com.drapoguz.pushr.injection.component.DaggerActivityComponent;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
-    // Data Members
+    // Data
     private ActivityComponent mActivityComponent;
 
 
-    // Protected Methods
+    // Dagger
     public ActivityComponent getActivityComponent() {
 
         if (mActivityComponent == null) {

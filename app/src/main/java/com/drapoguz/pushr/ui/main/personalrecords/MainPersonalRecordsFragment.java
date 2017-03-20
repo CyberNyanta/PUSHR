@@ -15,7 +15,7 @@ import javax.inject.Inject;
 public class MainPersonalRecordsFragment extends BaseFragment
         implements MainPersonalRecordsContract.View {
 
-    // Data Members
+    // Data
     @Inject
     MainPersonalRecordsPresenter mPresenter;
 

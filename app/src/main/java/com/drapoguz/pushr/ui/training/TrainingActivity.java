@@ -9,7 +9,7 @@ import javax.inject.Inject;
 
 public class TrainingActivity extends BaseActivity implements TrainingContract.View {
 
-    // Data Members
+    // Data
     @Inject
     TrainingPresenter mTrainingPresenter;
 

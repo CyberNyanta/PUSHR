@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
-public class SharedPreferenceManager {
+public final class SharedPreferenceManager {
 
     // Data Members
     private SharedPreferences mSharedPreferences;
