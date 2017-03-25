@@ -5,6 +5,8 @@ import android.content.Context;
 
 import com.drapoguz.pushr.injection.qualifier.AppContext;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -24,14 +26,16 @@ public class AppModule {
 
     // Provide Methods
     @Provides
-    Application provideApp() {
+    @Singleton
+    public Application provideApp() {
 
         return mApp;
     }
 
     @Provides
+    @Singleton
     @AppContext
-    Context provideAppContext() {
+    public Context provideAppContext() {
 
         return mApp.getApplicationContext();
     }

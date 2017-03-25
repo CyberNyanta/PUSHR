@@ -24,14 +24,14 @@ public class ActivityModule {
 
     // Provide Methods
     @Provides
-    Activity provideActivity() {
+    public Activity provideActivity() {
 
         return mActivity;
     }
 
     @Provides
     @ActivityContext
-    Context provideActivityContext() {
+    public Context provideActivityContext() {
 
         return mActivity;
     }
