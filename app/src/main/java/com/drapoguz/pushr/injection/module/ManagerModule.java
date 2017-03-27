@@ -14,26 +14,28 @@ import com.drapoguz.pushr.domain.manager.UserManager;
 import com.drapoguz.pushr.domain.manager.UserManagerContract;
 
 import dagger.Module;
+import dagger.Provides;
 
 @Module
 public class ManagerModule {
 
     // Provide Methods
+    @Provides
     public IterationManagerContract provideIterationManager(IterationLocalSourceContract iterationLocalSource) {
 
         return new IterationManager(iterationLocalSource);
     }
-
+    @Provides
     public SettingsManagerContract provideSettingsManager(SettingsLocalSourceContract settingsLocalSource) {
 
         return new SettingsManager(settingsLocalSource);
     }
-
+    @Provides
     public TrainingManagerContract provideTrainingManager(TrainingLocalSourceContract trainingLocalSource) {
 
         return new TrainingManager(trainingLocalSource);
     }
-
+    @Provides
     public UserManagerContract provideUserManager(UserLocalSourceContract userLocalSource) {
 
         return new UserManager(userLocalSource);

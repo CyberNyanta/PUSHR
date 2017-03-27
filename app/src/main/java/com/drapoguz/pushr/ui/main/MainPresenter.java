@@ -1,5 +1,10 @@
 package com.drapoguz.pushr.ui.main;
 
+import com.drapoguz.pushr.domain.manager.IterationManagerContract;
+import com.drapoguz.pushr.injection.component.DaggerLocalSourceComponent;
+import com.drapoguz.pushr.injection.component.DaggerManagerComponent;
+import com.drapoguz.pushr.injection.module.LocalSourceModule;
+import com.drapoguz.pushr.injection.module.ManagerModule;
 import com.drapoguz.pushr.ui.base.BasePresenter;
 
 import javax.inject.Inject;
@@ -7,9 +12,19 @@ import javax.inject.Inject;
 public class MainPresenter extends BasePresenter<MainContract.View>
         implements MainContract.Presenter<MainContract.View> {
 
-    // Constructors
     @Inject
+    IterationManagerContract IterationManager;
+
+
+    // Constructors
     public MainPresenter() {
+        DaggerLocalSourceComponent.builder()
+                .localSourceModule(new LocalSourceModule())
+                .build();
+        DaggerManagerComponent.builder()
+                .managerModule(new ManagerModule())
+                .build();
+
 
     }
 

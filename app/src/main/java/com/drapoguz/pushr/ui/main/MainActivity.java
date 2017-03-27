@@ -20,8 +20,8 @@ import javax.inject.Inject;
 
 public class MainActivity extends BaseActivity implements MainContract.View {
 
-    // Data
-    @Inject
+//    // Data
+//    @Inject
     MainPresenter mPresenter;
 
 
@@ -30,7 +30,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getActivityComponent().inject(this);
+//        getActivityComponent().inject(this);
 
         setContentView(R.layout.activity_main);
 
